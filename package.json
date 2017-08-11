@@ -1,0 +1,25 @@
+{
+  "name": "wiki-test",
+  "version": "1.0.0",
+  "description": "wiki api test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joei fiteny",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.2",
+    "digital-lexicon": "git+ssh://gitdesign@70.63.134.210:lexicon-modules#0.0.7"
+  }
+}
