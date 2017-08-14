@@ -48,6 +48,11 @@ header {
   background-color: $bbt-red;
   padding: 10px 0;
 
+  @media screen and (min-width: 901px) {
+
+    padding: 20px 0;
+  }
+
   button {
     background-color: $bbt-yellow;
     border: 0 none;
@@ -61,6 +66,11 @@ header {
     width: 100%;
     padding: 0 10px;
 
+    @media screen and (min-width: 901px) {
+
+      padding: 0 20px;
+    }
+
     h1 {
       font-family: $base-font;
       font-size: 26px;
@@ -68,6 +78,12 @@ header {
       line-height: 1.2;
       padding: 10px 0;
       text-align: center;
+
+      @media screen and (min-width: 901px) {
+
+        font-size: 36px;
+        padding: 20px 0;
+      }
     }
   }
 }
@@ -77,13 +93,26 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
 
+  @media screen and (min-width: 701px) {
+    flex-flow: row nowrap;
+  }
+
   button {
     font-size: 0;
     margin-bottom: 10px;
 
+    @media screen and (min-width: 901px) {
+
+      font-size: 100%;
+    }
+
     i {
       display: block;
       font-size: 20px;
+
+      @media screen and (min-width: 901px) {
+        display: none;
+      }
     }
   }
 
@@ -92,6 +121,22 @@ header {
 
     button {
       padding: 12px 20px 10px;
+    }
+  }
+
+  @media screen and (min-width: 901px) {
+
+    .search {
+      margin-bottom: 0;
+      order: 2;
+    }
+
+    .amount {
+      order: 3;
+    }
+
+    .clear-btn {
+      order: 4;
     }
   }
 }
@@ -109,6 +154,12 @@ header {
   width: 100%;
   z-index: 9999;
 
+  @media screen and (min-width: 701px) {
+
+    height: 62px;
+    padding: 0 10px 0 25px;
+  }
+
   input {
     border: 0 none;
     color: #676767;
@@ -119,9 +170,17 @@ header {
     outline: medium none;
     padding: 0;
     width: 80%;
+
+    @media screen and (min-width: 701px) {
+
+      font: 20px $base-font bold;
+      height: 60px;
+      line-height: 60px;
+      width: 88%;
+    }
   }
 
-  button{
+  button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 0 none;
     color: #717171;
@@ -131,6 +190,12 @@ header {
     font-size: 18px;
     margin-top: 10px;
     outline: medium none;
+
+    @media screen and (min-width: 701px) {
+
+      font-size: 28px;
+      margin-top: 18px;
+    }
   }
 }
 
@@ -139,7 +204,7 @@ main {
 }
 
 .wiki-article {
-  column-gap: 15px;
+  column-gap: 20px;
   columns: 3 320px;
   margin: 0 auto;
   max-width: 1240px;
@@ -150,7 +215,8 @@ main {
     background: $md-grey;
     border: 2px solid $off-white;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-    margin: 0 0 20px;
+    display: inline-block;
+    margin: 10px 0;
     overflow-y: auto;
     padding: 0 10px 20px;
 
@@ -168,7 +234,6 @@ main {
     }
 
     .article-extract {
-
       a {
         font: 16px/22px normal;
       }
@@ -177,70 +242,6 @@ main {
     p {
       font: 16px/22px normal;
       margin: 0 0 10px;
-    }
-  }
-}
-
-@media screen and (min-width: 701px) {
-  .controllers {
-    flex-flow: row nowrap;
-  }
-
-  .searchbar,
-  .filterbar {
-    height: 62px;
-    padding: 0 10px 0 25px;
-
-    input {
-      font: 20px $base-font bold;
-      height: 60px;
-      line-height: 60px;
-      width: 88%;
-    }
-
-    button {
-      font-size: 28px;
-      margin-top: 18px;
-    }
-  }
-}
-
-@media screen and (min-width: 901px) {
-
-  header {
-    padding: 20px 0;
-
-    section {
-      padding: 0 20px;
-
-      h1 {
-        font-size: 36px;
-        padding: 20px 0;
-      }
-    }
-  }
-
-  .controllers {
-
-    button {
-      font-size: 100%;
-
-      i {
-        display: none;
-      }
-    }
-
-    .search {
-      margin-bottom: 0;
-      order: 2;
-    }
-
-    .amount {
-      order: 3;
-    }
-
-    .clear-btn{
-      order: 4;
     }
   }
 }

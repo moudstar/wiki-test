@@ -26,40 +26,53 @@
 
   <body>
     <header role=”banner”>
+
       <section>
         <h1>Wikipedia Search</h1>
+
         <div class="controllers">
+
           <button class="reload" type="button">Load New Articles
             <i class="fa fa-refresh"></i>
           </button>
+
           <button class="clear-btn" type="reset">Clear All
             <i class="fa fa-trash"></i>
           </button>
+
           <div class="search">
             <button type="submit">Search
             <i class="fa fa-search"></i>
           </button>
           </div>
+
           <div class="amount">
             <button type="submit">Filter
               <i class="fa fa-filter"></i>
             </button>
           </div>
+
         </div><!--controllers-->
+
       </section>
+
     </header>
+
     <div class="searchbar clearfix">
       <button class="fa fa-search" type="submit"></button>
       <input name="search" type="text" aria-label="Search" placeholder="Search"/>
     </div>
+
     <div class="filterbar clearfix">
       <button class="fa fa-filter" type="submit"></button>
       <input name="filter" type="text" aria-label="Filter" placeholder="# of articles" />
     </div>
 
     <main class="clearfix" role="main">
+
       <article class="wiki-article grid">
       </article>
+
     </main>
 
     <!--build:js js/main.min.js -->

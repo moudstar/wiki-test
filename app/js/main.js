@@ -33,28 +33,43 @@ $(document).ready( function () {
   });
 
   // click button to show input bar
-  $( '.search button' ).click( function () {
+  $( '.search button' ).click( function (e) {
+    e.stopPropagation();
     if($( '.searchbar:visible' ).length) {
       $( '.searchbar' ).slideUp();
     } else {
       $( '.searchbar' ).slideDown();
       $( '.searchbar input' ).focus();
     }
+    if ($( '.filterbar:visible' ).length) {
+      $( '.filterbar' ).slideUp();
+    }
   });
 
   // click button to show input bar
-  $( '.amount button' ).click( function () {
+  $( '.amount button' ).click( function (e) {
+    e.stopPropagation();
     if($( '.filterbar:visible' ).length) {
       $( '.filterbar' ).slideUp();
     } else {
       $( '.filterbar' ).slideDown();
       $( '.filterbar input' ).focus();
     }
+    if($( '.searchbar:visible' ).length) {
+      $( '.searchbar' ).slideUp();
+    }
   });
 
   // hide bar again after click button
   $( '.searchbar button, .filterbar button').click( function () {
     $( this ).parent().slideUp();
+  });
+
+
+  //hide bar if click anywhere outside of button to enter
+  $( 'html' ).click( function(){
+    $( '.filterbar' ).slideUp();
+    $( '.searchbar' ).slideUp();
   });
 
   // grab the input value in the search field and display results
